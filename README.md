@@ -5,6 +5,26 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)](https://github.com)
 
+---
+
+## 📢 推文
+
+> 🦞 最近被龙虾轰炸太多了？玩腻了？想卸载？
+>
+> 等一下！听说最近卸载小龙虾服务越来越火了，上门服务一次收费 500 块。
+>
+> 但卸载 OpenClaw 不是拖进废纸篓就完事，需要至少 5 个复杂步骤：停服务、清配置、删状态、处理多 profile...
+>
+> 我把这套流程打包好了，写成完全开源免费的工具 —— OpenClaw Killer
+>
+> **为你劲省 500 💰**
+>
+> 支持 macOS/Linux/Windows，一键搞定
+
+更多推文模板和配图 prompt 请查看 [tweet.md](tweet.md)
+
+---
+
 ## 为什么要卸载 OpenClaw？
 
 如果你想了解为什么越来越多人选择卸载 OpenClaw，请阅读 [WHY.md](WHY.md)。
