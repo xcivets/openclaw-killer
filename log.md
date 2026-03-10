@@ -105,3 +105,36 @@
 - **openclaw-killer.ps1** - 添加自我清理功能
 - **README.md** - 添加语言徽章和多语言链接，标注 v1.1 新功能
 - 新增 15 个多语言 README 文件
+
+## 2026-03-10 - 添加 OpenClaw Skill 支持
+
+### 新功能
+
+**讽刺的美学：让 OpenClaw 卸载自己 🦞**
+
+现在可以将 OpenClaw Killer 作为 OpenClaw Skill 使用，让龙虾自己卸载自己。
+
+### 新增文件
+
+1. **skill.json** - Skill 配置文件
+   - 定义 Skill 元数据
+   - 触发词、语言、平台支持
+
+2. **openclaw-killer.skill.md** - Skill 说明文档
+   - 详细的 Skill 使用说明
+   - 示例对话
+   - 安全说明
+
+3. **install-skill.sh** - Skill 安装脚本
+   - 自动安装到 OpenClaw
+   - 复制必要文件
+   - 注册 Skill
+
+4. **SKILL_README.md** - Skill 专用说明
+   - 讽刺性说明
+   - 使用方法
+   - 讽刺的美学解释
+
+### 更新文件
+
+- **README.md** - 添加 Skill 使用方式，提供两种使用方法
