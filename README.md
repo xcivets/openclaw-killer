@@ -22,7 +22,7 @@
 
 ```bash
 # 下载脚本
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/openclaw-killer/main/openclaw-killer.sh
+curl -O https://raw.githubusercontent.com/orange2ai/openclaw-killer/main/openclaw-killer.sh
 
 # 添加执行权限
 chmod +x openclaw-killer.sh
@@ -35,7 +35,7 @@ chmod +x openclaw-killer.sh
 
 ```powershell
 # 下载脚本
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/YOUR_USERNAME/openclaw-killer/main/openclaw-killer.ps1" -OutFile "openclaw-killer.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/orange2ai/openclaw-killer/main/openclaw-killer.ps1" -OutFile "openclaw-killer.ps1"
 
 # 如果遇到执行策略限制，先运行
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
