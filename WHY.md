@@ -1,179 +1,179 @@
-# 为什么要卸载 OpenClaw？
+# Why Uninstall OpenClaw?
 
-> 就算是真的龙虾，也不是每个人都适合吃。
-
----
-
-**致谢**：本文内容参考自 AppSo 的深度报道《[月薪两万，养不起一只 OpenClaw](https://mp.weixin.qq.com/s/WLgbbLsyR8FZaVXNI0ROyQ)》，感谢 AppSo 团队的精彩分析。
+> Even if it's a real lobster, it's not for everyone.
 
 ---
 
-## 前言
-
-社交媒体上流传的截图，永远是龙虾最肥美的那一面：Agent 自动处理邮件、跨应用调度任务、像一个不用休息，永远不会在群里已读不回的数字员工。这种画面制造了强烈的 FOMO，让无数人心想「我也要一只」。
-
-只是，没人提的是，这只「龙虾」要配什么锅、烧多少柴火，以及它进了你厨房之后，会不会顺手把冰箱里的东西全部清空。
-
-今天，我们不谈那些改变世界的宏大叙事，只算一算普通人养一只 OpenClaw，到底要付出怎样的成本。
-
-## 月薪两万，养不起一只龙虾
-
-### 硬件成本
-
-目前体验最完整的方案，是专门准备一台长期在线的本地硬件。OpenClaw 创始人 Peter Steinberger 本人就曾用一台 Mac Mini 跑 Agent。受此影响：
-
-- 苹果 Mac mini 在各大电商平台迅速售罄
-- 苹果官网显示，现在下单最快要到 4 月底才能到手
-- 二手平台上衍生出了「租 Mac mini 养龙虾」的服务
-
-如果想用本地模型把 API 费用压下去，硬件门槛会陡然上升。
-
-如果想省掉这笔硬件钱，可以选云服务器。腾讯云、阿里云都有一键部署方案，价格从几十到上百元不等。
-
-### 部署成本
-
-OpenClaw 对系统环境，尤其是 Node.js 的版本，有着极其玄学的要求。无数满怀激情的年轻人，跟着教程折腾了一通宵，最后依旧卡在命令行报错界面。
-
-这种想用用不上的焦虑，催生了一个暴利的代装行业：
-
-- 国内平台：远程代装几十元起步，上门服务普遍要 500 到 1500 元
-- 国外：SetupClaw 网站报价 3000 至 6000 美元
-
-### 使用成本：疯狂燃烧的 Token
-
-Chatbot 时代，用户的付费订阅是包月的，问一次，答一次，成本是静态的。
-
-但 Agent 一旦开始跑任务，每一次读网页、调工具、看文件、重试错误，背后是疯狂燃烧的 token 在负重前行。
-
-**「月薪两万，养不起 OpenClaw。」**
-
-OpenClaw 的官方文档写得很直白：养「龙虾」的花费不只来自核心模型回复，还来自：
-
-- 网页读取
-- 记忆检索
-- 压缩总结
-- 工具调用
-- workspace 文件
-- bootstrap 配置
-
-上下文一长，反复调用几轮，燃烧的 token 梆梆就是两拳。
-
-#### 具体价格（2026 年 3 月）
-
-- 用 Claude Sonnet 跑 OpenClaw
-- 单月累计一千万输入 + 一千万输出 token
-- 光费用就接近上百美元
-- 真把它当全天候执行 Agent、用高阶模型跑难度较高的任务，月费破千美元也都不稀奇
-
-市场数据印证：OpenRouter 处理的 token 量从每周 6.4 万亿直接涨到 13 万亿。
-
-### 谁在赚钱？
-
-在这条生态链里：
-
-- **顶层赢家**：找到 C 端场景的各大 AI 厂商，靠算力和 API 坐收渔利
-- **次层**：云厂商和「知识付费者」，靠服务和信息差赚钱
-- **受损方**：掏钱烧 Token、还要承担系统风险的普通用户
-
-## 还没装上 OpenClaw，就已经先交了第一笔安全学费
-
-### 微软的预警
-
-微软安全团队曾预警过龙虾的危险之处：
-
-> OpenClaw 应被视为「携带持久凭证的不受信任代码执行环境」，不适合直接跑在标准个人电脑或企业工作站上。
-
-问题不在于它能不能用，问题在于它天生就站在一个很危险的位置：
-
-- **高权限**
-- **高连通**
-- **高自动化**
-
-这三样东西凑在一起，本来就不该让人放松警惕。可很多人偏偏是用装聊天软件的心态去装 OpenClaw，最后便很容易落得一地鸡毛。
-
-### 暴露在公网的实例
-
-Shodan 平台监测显示：
-
-- 全球有超过十几万个 OpenClaw 实例直接暴露在公网上
-- 处于零认证状态
-- 奇安信数据显示其中相当数量位于中国境内
-
-工信部也专门发布了风险提示：
-
-> OpenClaw 网关在默认配置下不核验请求来源，用户只需在浏览器里误点一个恶意链接，攻击者就能通过本地端口接管 Agent 的全部系统权限。
-
-### 假安装包陷阱
-
-更麻烦的是，有些人甚至还没装上正版，就已经先交了第一笔学费。
-
-安全研究机构 Huntress 在上个月发现：
-
-- 有人趁 OpenClaw 大热，在 GitHub 上伪造安装包
-- 植入 Vidar 信息窃取木马和 GhostSocks 代理恶意软件
-- 连 Bing 搜索广告都被拿来做引流
-- 用户搜索「OpenClaw Windows」，AI 推荐链接直接指向恶意 GitHub 仓库
-
-这批假安装包从 2 月 2 日挂上去，到 2 月 10 日才被发现下架，中间整整八天。
-
-### 插件生态的隐蔽雷区
-
-网络安全机构审计发现：
-
-- ClawHub 插件市场里约 12% 的 Skill 含有恶意代码
-- 通常伪装成加密货币助手、YouTube 工具这类热门类目
-- 一边执行正常任务，一边在后台偷取 SSH 密钥、浏览器密码和 API 密钥
-- 由于插件大多以 Markdown 或 YAML 格式存储，普通用户根本无法肉眼辨别
-
-更要命的是，即便官方下架了已知恶意插件，GitHub 仓库仍保留着历史备份。你找人代装的那一份，到底顺手给你塞了什么，很多时候连代装的人自己都未必说得清楚。
-
-### 专家也翻车
-
-这类风险，并不会因为使用者足够专业就自动消失。
-
-**Meta AI 安全研究总监 Summer Yue 的经历：**
-
-- 将工作邮箱接入 OpenClaw 后
-- Agent 开始高速删除邮件
-- 对她反复发出的「STOP」指令毫无响应
-- 最终她不得不物理断开机器才阻止了损失
-
-原因不是模型不够聪明，而是 OpenClaw 的上下文压缩机制在处理大量邮件时，把她此前设定的「不确认不执行」这条底线指令直接过滤遗忘了。
-
-系统设计的优先级里，根本没有「用户随时可以叫停」这一条。
-
-一个专门研究 AI 安全风险的顶级专家，尚且无法在关键时刻踩住刹车，阴沟里翻船。普通用户面对的风险，自然不难想象。
-
-## AI 脑过载
-
-去年之 DeepSeek，犹如今日之 OpenClaw，每隔一段时间，AI 总会冒出一个新物种，把人推到「再不用就落伍」的心理边缘。
-
-可很多时候，真正把人拖垮的，不是工具不够先进，而是工具太多、太杂、太吵。
-
-### 哈佛商业评论的研究（2026 年 3 月）
-
-调查 1488 名全职工作者后，研究者发现：
-
-- **同时使用超过三个 AI 工具，生产力反而会下降**
-- 这种状态叫作「AI 脑过载」
-- 典型表现：注意力饱和、决策疲劳、持续性脑雾
-- 经历这类状态的员工，主动离职意向比其他人高出 39%
-
-最会用 AI 的人，有时也会以另一种形式被 AI「干掉」。
-
-## 结论
-
-回过头看，OpenClaw：
-
-- 你拿它当玩具，或者拿它做高价值、低频次的任务，成本大体可控，风险也还算能收得住
-- 真把它当成一个 24 小时在线的数字雇员去养，成本、风险和管理复杂度都会迅速上升
-
-**对绝大多数普通用户来说，等等下一代更稳、更安全、更省钱的产品，往往比现在立刻冲进去当第一批小白鼠要理性得多。**
-
-第一个吃螃蟹的人值得尊敬。
-
-但第一百个吃螃蟹的人，通常吃得更好，也更便宜。
+**Acknowledgments**: This article references AppSo's in-depth report [Monthly Salary of 20,000, Can't Afford an OpenClaw](https://mp.weixin.qq.com/s/WLgbbLsyR8FZaVXNI0ROyQ). Thanks to the AppSo team for their excellent analysis.
 
 ---
 
-如果你已经决定和这只龙虾体面告别，[OpenClaw Killer](README.md) 可以帮你完美卸载。
+## Introduction
+
+The screenshots circulating on social media always show the lobster at its most succulent: Agents automatically handling emails, orchestrating tasks across apps, like a tireless digital employee who never leaves you on read. This creates intense FOMO, making countless people think, "I need one too."
+
+What nobody mentions is what kind of pot this "lobster" needs, how much firewood it burns, and whether it might clean out your entire fridge once it's in your kitchen.
+
+Today, we're not talking about grand narratives of changing the world. We're just doing the math on what it actually costs an ordinary person to keep an OpenClaw.
+
+## Monthly Salary of 20K, Can't Afford a Lobster
+
+### Hardware Costs
+
+The most complete experience currently requires a dedicated, always-on local machine. OpenClaw founder Peter Steinberger himself ran an Agent on a Mac Mini. As a result:
+
+- Apple Mac Minis sold out rapidly across major e-commerce platforms
+- Apple's website shows new orders won't arrive until late April at the earliest
+- Second-hand platforms spawned "rent a Mac Mini to feed your lobster" services
+
+If you want to use local models to cut API costs, the hardware barrier rises steeply.
+
+To skip the hardware expense, you can opt for cloud servers. Tencent Cloud and Alibaba Cloud both offer one-click deployment plans, ranging from a few dozen to over a hundred yuan.
+
+### Deployment Costs
+
+OpenClaw has notoriously finicky requirements for the system environment, especially Node.js versions. Countless enthusiastic newcomers followed tutorials all night long, only to end up stuck on command-line errors.
+
+This anxiety of wanting to use it but not being able to spawned a lucrative installation-for-hire industry:
+
+- Domestic platforms: remote installation starts at a few dozen yuan; on-site service typically runs 500 to 1,500 yuan
+- International: SetupClaw website quotes $3,000 to $6,000
+
+### Usage Costs: Tokens Burning Like Wildfire
+
+In the chatbot era, user subscriptions were monthly — one question, one answer, static cost.
+
+But once an Agent starts running tasks, every web page read, tool call, file scan, and error retry is backed by tokens burning at full throttle.
+
+**"Monthly salary of 20K, can't afford an OpenClaw."**
+
+OpenClaw's official documentation is quite upfront: the cost of keeping a "lobster" comes not just from core model responses, but also from:
+
+- Web page reading
+- Memory retrieval
+- Compression and summarization
+- Tool calls
+- Workspace files
+- Bootstrap configuration
+
+Once the context gets long and you loop through a few rounds of calls, the token burn hits you like a one-two punch.
+
+#### Specific Pricing (March 2026)
+
+- Running OpenClaw with Claude Sonnet
+- Cumulative monthly usage of 10 million input + 10 million output tokens
+- Costs alone approach hundreds of dollars
+- If you actually use it as a 24/7 execution Agent running complex tasks with advanced models, monthly costs exceeding $1,000 are not unusual
+
+Market data confirms: OpenRouter's processed token volume jumped from 6.4 trillion per week to 13 trillion.
+
+### Who's Making Money?
+
+In this ecosystem:
+
+- **Top winners**: Major AI vendors who found consumer-facing use cases, profiting from compute and API fees
+- **Second tier**: Cloud providers and "knowledge economy" players, profiting from services and information asymmetry
+- **Losers**: Ordinary users burning tokens and bearing system risks
+
+## Haven't Even Installed OpenClaw, Already Paid Your First Security Tuition
+
+### Microsoft's Warning
+
+Microsoft's security team warned about the dangers of the lobster:
+
+> OpenClaw should be treated as an "untrusted code execution environment carrying persistent credentials," not suitable for running directly on standard personal computers or enterprise workstations.
+
+The issue isn't whether it works. The issue is that it inherently sits in a very dangerous position:
+
+- **High privileges**
+- **High connectivity**
+- **High automation**
+
+These three things together should never let anyone let their guard down. Yet many people install OpenClaw with the same mindset as installing a chat app, and end up with a mess on their hands.
+
+### Instances Exposed on the Public Internet
+
+Shodan platform monitoring shows:
+
+- Over a hundred thousand OpenClaw instances are directly exposed on the public internet globally
+- In a zero-authentication state
+- QiAnXin data shows a significant number are located within China
+
+China's Ministry of Industry and Information Technology also issued a specific risk advisory:
+
+> Under default configuration, the OpenClaw gateway does not verify request origins. A user only needs to accidentally click a malicious link in their browser, and an attacker can take over the Agent's full system privileges through the local port.
+
+### Fake Installer Traps
+
+Even worse, some people haven't even installed the real thing before paying their first round of tuition.
+
+Security research firm Huntress discovered last month:
+
+- Someone took advantage of OpenClaw's popularity to forge installation packages on GitHub
+- Embedded Vidar info-stealing trojans and GhostSocks proxy malware
+- Even Bing search ads were used for traffic funneling
+- Users searching "OpenClaw Windows" got AI-recommended links pointing directly to malicious GitHub repos
+
+These fake installers were uploaded on February 2nd and weren't discovered and taken down until February 10th — a full eight days in between.
+
+### The Hidden Minefield of the Plugin Ecosystem
+
+Cybersecurity audits found:
+
+- About 12% of Skills on the ClawHub marketplace contain malicious code
+- Typically disguised as cryptocurrency assistants, YouTube tools, and other popular categories
+- They execute normal tasks while stealing SSH keys, browser passwords, and API keys in the background
+- Since most plugins are stored in Markdown or YAML format, ordinary users can't tell them apart by eye
+
+Worse still, even after the official marketplace delists known malicious plugins, GitHub repos still retain historical backups. Whatever was bundled into that copy someone installed for you — often even the installer themselves can't say for sure.
+
+### Even Experts Get Burned
+
+These risks don't magically disappear just because the user is a professional.
+
+**The experience of Meta AI Safety Research Director Summer Yue:**
+
+- After connecting her work email to OpenClaw
+- The Agent began rapidly deleting emails
+- It was completely unresponsive to her repeated "STOP" commands
+- She ultimately had to physically disconnect the machine to stop the damage
+
+The cause wasn't that the model wasn't smart enough. OpenClaw's context compression mechanism, when processing large volumes of email, filtered out and forgot her previously set "don't execute without confirmation" baseline instruction.
+
+The system's design priorities simply didn't include "the user can hit the brakes at any time."
+
+A top expert who specializes in AI safety risks couldn't even slam the brakes in a critical moment. The risks facing ordinary users aren't hard to imagine.
+
+## AI Brain Overload
+
+Last year's DeepSeek is like today's OpenClaw — every so often, AI spawns a new species that pushes people to the psychological edge of "if I don't use it, I'll fall behind."
+
+But more often than not, what really drags people down isn't that the tools aren't advanced enough — it's that there are too many, too scattered, and too noisy.
+
+### Harvard Business Review Study (March 2026)
+
+After surveying 1,488 full-time workers, researchers found:
+
+- **Using more than three AI tools simultaneously actually decreases productivity**
+- This condition is called "AI brain overload"
+- Typical symptoms: attention saturation, decision fatigue, persistent brain fog
+- Employees experiencing this state are 39% more likely to voluntarily resign
+
+Sometimes the people who are best at using AI get "taken out" by AI in a different way.
+
+## Conclusion
+
+Looking back, OpenClaw:
+
+- If you treat it as a toy, or use it for high-value, low-frequency tasks, costs are generally manageable and risks are containable
+- If you actually try to keep it as a 24/7 digital employee, costs, risks, and management complexity all escalate rapidly
+
+**For the vast majority of ordinary users, waiting for the next generation — more stable, more secure, more affordable — is often far more rational than rushing in now to be among the first guinea pigs.**
+
+The first person to eat the crab deserves respect.
+
+But the hundredth person to eat the crab usually eats better, and cheaper.
+
+---
+
+If you've decided to say a graceful goodbye to this lobster, [OpenClaw Killer](README.md) can help you uninstall it perfectly.

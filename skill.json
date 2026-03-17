@@ -1,7 +1,7 @@
 {
   "name": "openclaw-killer",
   "version": "1.1.0",
-  "description": "一键完美卸载 OpenClaw，让这只龙虾体面告别 🦞 | One-click perfect uninstallation of OpenClaw",
+  "description": "One-click perfect uninstallation of OpenClaw. Say goodbye to the lobster gracefully 🦞",
   "author": "orange2ai",
   "license": "MIT",
   "homepage": "https://github.com/orange2ai/openclaw-killer",
@@ -51,12 +51,12 @@
     "Windows"
   ],
   "features": [
-    "自动检测系统环境",
-    "智能选择卸载路径",
-    "清理所有残留文件",
-    "支持多 profile 配置",
-    "脚本自我清理",
-    "16 种语言支持"
+    "Auto-detect system environment",
+    "Smart uninstall path selection",
+    "Clean all residual files",
+    "Multi-profile support",
+    "Script self-cleanup",
+    "16 languages supported"
   ],
   "files": [
     "openclaw-killer.sh",

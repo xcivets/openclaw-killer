@@ -1,58 +1,58 @@
 # OpenClaw Killer Skill
 
-一个讽刺性的 OpenClaw Skill - 让 OpenClaw 卸载自己 🦞
+An ironic OpenClaw Skill — let OpenClaw uninstall itself 🦞
 
-## 安装
+## Installation
 
 ```bash
-# 克隆仓库
+# Clone the repo
 git clone https://github.com/orange2ai/openclaw-killer.git
 cd openclaw-killer
 
-# 安装 Skill
+# Install the Skill
 ./install-skill.sh
 ```
 
-## 使用
+## Usage
 
-在 OpenClaw 中说：
+Say any of the following in OpenClaw:
 - "卸载 OpenClaw"
 - "删除 OpenClaw"
 - "移除 OpenClaw"
 - "uninstall OpenClaw"
 - "remove OpenClaw"
 
-## 这是什么？
+## What Is This?
 
-这是一个讽刺性的 Skill，让 OpenClaw 自己卸载自己。就像让龙虾自己爬进锅里一样。
+An ironic Skill that makes OpenClaw uninstall itself. Like a lobster crawling into the pot itself.
 
-## 为什么？
+## Why?
 
-因为：
-- 💰 月费可能破千美元
-- 🔒 十几万实例暴露在公网
-- 🧠 AI 脑过载反而降低生产力
-- ⚠️ 连专家都可能踩不住刹车
+Because:
+- 💰 Monthly costs can exceed $1,000
+- 🔒 Hundreds of thousands of instances exposed on the public internet
+- 🧠 AI brain overload actually reduces productivity
+- ⚠️ Even experts can't hit the brakes
 
-详见：[WHY.md](WHY.md)
+See: [WHY.md](WHY.md)
 
-## 功能
+## Features
 
-- 自动检测系统环境
-- 智能选择卸载路径
-- 清理所有残留文件
-- 支持多 profile 配置
-- 脚本自我清理
-- 16 种语言支持
+- Auto-detect system environment
+- Smart uninstall path selection
+- Clean all residual files
+- Multi-profile support
+- Script self-cleanup
+- 16 languages supported
 
-## 讽刺的美学
+## The Irony
 
-这个 Skill 的讽刺之处在于：
-1. 你需要 OpenClaw 来运行这个 Skill
-2. 这个 Skill 会卸载 OpenClaw
-3. 卸载完成后，Skill 也会消失
-4. 就像一个自我毁灭的程序
+The beauty of this Skill's irony:
+1. You need OpenClaw to run this Skill
+2. This Skill uninstalls OpenClaw
+3. Once uninstalled, the Skill disappears too
+4. A self-destructing program
 
-## 许可证
+## License
 
-MIT License - 自由使用，自由卸载
+MIT License — free to use, free to uninstall

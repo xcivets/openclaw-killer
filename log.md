@@ -138,3 +138,49 @@
 ### 更新文件
 
 - **README.md** - 添加 Skill 使用方式，提供两种使用方法
+
+## 2026-03-18 - GitHub 首页英文化
+
+### 目的
+
+让 GitHub 仓库首页对英文用户更友好，将默认 README 切换为英文版。
+
+### 操作
+
+1. **README.md（中文）→ README.zh.md** - 将原中文 README 复制为 README.zh.md
+2. **README.en.md → README.md** - 将英文版内容升级为新的默认 README.md
+3. **删除 README.en.md** - 英文已是默认，不再需要单独文件
+4. **增强新 README.md（英文）**：
+   - 添加 16 语言切换栏（链接到 README.zh.md 而非 README.en.md）
+   - 添加 Languages 徽章
+   - 添加 Skill 使用方式（Method 1）
+   - 添加 v1.1 新功能和 Skill 支持标注
+5. **更新 README.zh.md** - 语言切换栏中 English 链接改为 README.md
+
+### 文件变更
+
+- **新增**: README.zh.md（从原 README.md 复制）
+- **重写**: README.md（英文版，含完整语言切换、Skill 支持、v1.1 功能）
+- **删除**: README.en.md
+- **修改**: README.zh.md（English 链接指向 README.md）
+
+## 2026-03-18 - Full Internationalization of Remaining Chinese Files
+
+### Purpose
+
+Translate all remaining Chinese-language files to English, completing the internationalization of the entire repository.
+
+### Files Translated
+
+1. **SKILL_README.md** — Translated to English (ironic tone preserved, lobster metaphor kept)
+2. **openclaw-killer.skill.md** — Skill instruction file translated; Chinese triggers retained alongside English
+3. **install-skill.sh** — All Chinese comments and echo messages translated to English
+4. **skill.json** — Description and features array translated to English; bilingual triggers and keywords preserved
+5. **WHY.md** — Full translation of cost analysis, security risks, AI brain overload, and conclusion sections
+6. **龙虾卸载指南.md → uninstall-guide.md** — Renamed and translated; all shell commands preserved exactly as-is
+
+### File Changes
+
+- **Translated**: SKILL_README.md, openclaw-killer.skill.md, install-skill.sh, skill.json, WHY.md
+- **New**: uninstall-guide.md (English translation of 龙虾卸载指南.md)
+- **Deleted**: 龙虾卸载指南.md (replaced by uninstall-guide.md)
