@@ -121,13 +121,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Star History
 
-<a href="https://star-history.com/#orange2ai/openclaw-killer&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=orange2ai/openclaw-killer&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=orange2ai/openclaw-killer&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=orange2ai/openclaw-killer&type=Date" width="100%" />
- </picture>
-</a>
+[![Star History Chart](https://starchart.cc/orange2ai/openclaw-killer.svg?variant=adaptive)](https://starchart.cc/orange2ai/openclaw-killer)
 
 ## 许可证
 
